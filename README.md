@@ -1,5 +1,5 @@
 # Ag_intensification_and_VBDs_Amazon
-Repository containing final data and code for agricultural land use change and intensification effects on vector-borne diseases in the Amazon project.
+Repository containing final data and code for agricultural land use change and intensification effects on vector-borne diseases in the Amazon project. All analyses were conducted in R version 4.4.1 on a MacOS Sequoia 15.7.3.
 
 The code file: "ag_intensification_VBD_final_analysis.R" analyzes the effect of pasture and crop land use change, fragmentation and intensification on P. falciparum malaria, dengue virus and cutaneous leishmaniasis incidence across the Brazilian, Peruvian and Colombian Amazon region of South America.
 It includes the main model specifications for each of the three diseases as reported in the main manuscript and reproduces the panels of the main results figure (Figure 4).
