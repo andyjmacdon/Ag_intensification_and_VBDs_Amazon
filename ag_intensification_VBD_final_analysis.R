@@ -35,6 +35,10 @@ malaria_feols_FEs_Covs_countryByYear_ag_pasture <- feols(
   + I(ERA5_mean_temp_std^2)
   + Precip_std
   + Population_Density_std
+  + NTL_max_std
+  + PerNoSewage_std
+  + PerRural_std
+  + PerIndig_std*log.Mining_Area_ha
   |
     Year^Country +
     Code_unique 
@@ -102,8 +106,8 @@ ggplot(malaria_ME_pasture_patch_df, aes(x=log.area_mn_pasture_mosaic, y=estimate
   ) +
   geom_hline(yintercept=0, linetype="dashed", color="black") +
   theme_minimal(base_size = 22) + xlab("Pasture patch size, ha (log scale)") +
-  geom_line(data=preds_malaria_pasture_patch, aes(x=log.area_mn_pasture_mosaic, y=estimate*0.7), color="gray", linewidth=1.5, linetype=2) +
-  scale_y_continuous(name="Marginal Effect, 95% CI\n(solid yellow)", sec.axis=sec_axis(~.*(1/0.7), name="Predicted relationship\n(dashed grey)")) +
+  geom_line(data=preds_malaria_pasture_patch, aes(x=log.area_mn_pasture_mosaic, y=estimate*0.6), color="gray", linewidth=1.5, linetype=2) +
+  scale_y_continuous(name="Marginal Effect, 95% CI\n(solid yellow)", sec.axis=sec_axis(~.*(1/0.6), name="Predicted relationship\n(dashed grey)")) +
   ggtitle("Malaria ~ pasture patch size") + theme(plot.title.position = "plot", plot.title = element_text(hjust = 0.5))
 
 
@@ -134,6 +138,10 @@ dengue_feols_FEs_Covs_countryByYear_ag_pasture <- feols(
   + I(ERA5_mean_temp_std^2)
   + Precip_std
   + Population_Density_std
+  + NTL_max_std
+  + PerNoWater_std
+  + PerRural_std
+  + log.area_mn_urban
   |
     Year^Country +
     Code_unique 
@@ -231,6 +239,11 @@ CL_feols_FEs_Covs_countryByYear_ag_pasture <- feols(
   + I(ERA5_mean_temp_std^2)
   + Precip_std
   + Population_Density_std
+  + NTL_max_std
+  + PerNoSewage_std
+  + PerRural_std
+  + log.Forest_Urban
+  + log.Agriculture_Urban
   |
     Year^Country +
     Code_unique 
