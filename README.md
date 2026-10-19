@@ -27,7 +27,7 @@ The data files: "Malaria_final_dataset.csv", “Dengue_final_dataset.csv”, and
 21.	Precip_std: z-score transformed cumulative annual precipitation
 22.	Population_Density_std: z-score transformed annual population density
 23.	NTL_max_std: z-score transformed maximum nighttime light emission
-24.	PerNoSewage_std: z-score transformed percent of population with no sewage treatment
+24.	PerNoSewage_std: z-score transformed percent of population with no sewer service
 25.	PerNoWater_std: z-score transformed percent of population with no piped water
 26.	PerRural_std: z-score transformed percent of population living in rural areas
 27.	PerIndig_std: z-score transformed percent of population that is indigenous
